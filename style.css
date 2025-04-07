@@ -1,0 +1,142 @@
+/* Reset y estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    background-color: #f5f5f5;
+    overflow-x: hidden;
+    touch-action: pan-y;
+}
+
+/* Contenedor principal del libro */
+.book-container {
+    width: 100vw;
+    height: 100vh;
+    perspective: 1500px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Libro */
+.book {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.8s ease;
+}
+
+/* Páginas del libro */
+.page {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    overflow: hidden;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.8s ease, z-index 0.8s ease;
+}
+
+/* Portada */
+#cover {
+    background-color: #8b4513;
+    color: #fff;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+}
+
+#cover h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+/* Páginas izquierdas (con líneas de libreta) */
+.left-page {
+    background: linear-gradient(#fff, #fff 95%, #eee 100%);
+    background-size: 100% 30px;
+    background-repeat: repeat-y;
+    padding-left: 40px;
+    padding-right: 20px;
+    text-align: left;
+}
+
+.lined-content {
+    margin-top: 20px;
+    line-height: 30px; /* Para que coincida con las líneas */
+}
+
+.page-title {
+    color: #8b4513;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.postdata {
+    font-style: italic;
+    color: #666;
+    margin-top: 20px;
+}
+
+/* Páginas derechas (con fotos polaroid) */
+.right-page {
+    background-color: #f9f9f9;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    overflow-y: auto;
+}
+
+/* Polaroid individual */
+.polaroid-single {
+    background: white;
+    padding: 15px 15px 40px 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: rotate(1deg);
+    margin: 20px 0;
+    max-width: 80%;
+    position: relative;
+}
+
+.polaroid-single:before {
+    content: '';
+    position: absolute;
+    bottom: 15px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    background: #f5f5f5;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.polaroid-single img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 1px}
