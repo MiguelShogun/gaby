@@ -1,142 +1,250 @@
-/* Reset y estilos generales */
-* {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body{
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    -webkit-tap-highlight-color: transparent;
+    font-family:'Poppins', sans-serif;
+
 }
 
-body {
-    font-family: 'Georgia', serif;
-    background-color: #f5f5f5;
-    overflow-x: hidden;
-    touch-action: pan-y;
+.header{
+    display: flex;
+    justify-content:space-around;
+    background-color: #2c3e50;
+     margin-top: 0px;
+     align-items: center;
+     justify-content: center;
+     justify-content: space-between;
 }
 
-/* Contenedor principal del libro */
-.book-container {
-    width: 100vw;
-    height: 100vh;
-    perspective: 1500px;
+.rightHeader{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    
+    width: 300px;
+}
+.cart-menu {
     position: relative;
-    overflow: hidden;
 }
 
-/* Libro */
-.book {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    transform-style: preserve-3d;
-    transition: transform 0.8s ease;
-}
-
-/* Páginas del libro */
-.page {
+.dropdown {
+    display: none;
     position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    backface-visibility: hidden;
-    overflow: hidden;
-    padding: 20px;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    transition: transform 0.8s ease, z-index 0.8s ease;
+    right: 0;
+    background-color: #2c3e50;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    padding: 0;
+    margin: 0;
+    border-radius: 4px;
 }
 
-/* Portada */
-#cover {
-    background-color: #8b4513;
-    color: #fff;
-    z-index: 10;
+.dropdown li {
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid #34495e;
+}
+
+.dropdown li:last-child {
+    border-bottom: none;
+}
+
+.dropdown li a {
+    color: white;
+    display: block;
+}
+
+.dropdown li:hover {
+    background-color: #34495e;
+}
+
+.cart-menu:hover .dropdown {
+    display: block;
+}
+
+.leftHeader{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-around;
+  
+    width: 300px;
+}
+.logo{
+    color: white;
+   
+}
+
+.menu{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    width: 300px;
+}
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+img{
+    height: 500px;
+}
+.center{
+    background-image: url(photo_2025-04-07_19-20-47.jpg);
     background-size: cover;
     background-position: center;
-}
-
-#cover h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 10px 20px;
-    border-radius: 5px;
-}
-
-/* Páginas izquierdas (con líneas de libreta) */
-.left-page {
-    background: linear-gradient(#fff, #fff 95%, #eee 100%);
-    background-size: 100% 30px;
-    background-repeat: repeat-y;
-    padding-left: 40px;
-    padding-right: 20px;
-    text-align: left;
-}
-
-.lined-content {
-    margin-top: 20px;
-    line-height: 30px; /* Para que coincida con las líneas */
-}
-
-.page-title {
-    color: #8b4513;
-    margin-bottom: 20px;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 10px;
-}
-
-.postdata {
-    font-style: italic;
-    color: #666;
-    margin-top: 20px;
-}
-
-/* Páginas derechas (con fotos polaroid) */
-.right-page {
-    background-color: #f9f9f9;
-    padding: 20px;
+    height: 500px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
     align-items: center;
-    overflow-y: auto;
+    justify-content: center;
+    color: white;
+}
+.BtnCatalogo{
+    background-color: #e74c3c;
+    border-radius: 10px;
+    border: white;
+    height: 30px;
+}
+.Grid1{
+    border: 2px solid black;
+    height: 300px;
+    width: 300px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+
+}
+.Novedades{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.gridContainer{
+    display: flex;
+    justify-content: space-around;
+    width: 900px;
+
+    
+}
+.gridContainer1{
+    display: flex;
+    justify-content: space-around;
+    width: 900px;
+    
+    
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    
+}
+img{
+    width: 200px;
+    height: 200px;
+}
+.reviewer1{
+    border: 1px solid #e74c3c;
+}
+.ana{
+    width: 60px;
+    height: 60px;
+    border-radius: 20px;
+    margin-left: 6px;
+}
+.decrip{
+    font-size: 12px;
+}
+.Nov{
+    color: #2c3e50;
+
 }
 
-/* Polaroid individual */
-.polaroid-single {
-    background: white;
-    padding: 15px 15px 40px 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transform: rotate(1deg);
-    margin: 20px 0;
-    max-width: 80%;
+.Footpage {
+    display: flex;
+    align-items: center; /* Centra verticalmente */
+    justify-content: space-between; /* Separa los elementos a los extremos */
+    padding: 1rem 2rem;
+    background-color:#2c3e50;
+    width: 1840px;
+}
+
+.content {
+    flex: 1; /* Ocupa todo el espacio disponible */
+    text-align: center; /* Centra el texto dentro de su contenedor */
+    margin: 0; /* Elimina márgenes por defecto del <p> */
+    color: white;
+}
+
+.SocialNetwork {
+    margin-left: auto; /* Empuja los iconos a la derecha */
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px; /* Espacio entre iconos */
+}
+
+.social-icons a {
+    color: #333; /* Color de los iconos */
+    font-size: 1.5rem;
+    transition: opacity 0.3s;
+}
+
+.social-icons a:hover {
+    opacity: 0.7;
+}
+.social-icons {
+    display: flex;
+}
+.social-icons a {
+    color: #000; /* Color por defecto (negro) */
+    font-size: 2rem;
+    transition: color 0.3s;
+}
+.social-icons a:hover {
+    opacity: 0.8;
+}
+.instagram:hover {
+    color: #E1306C; /* Color de Instagram */
+}
+.facebook:hover {
+    color: #1877F2; /* Color de Facebook */
+}
+.tiktok:hover {
+    color: #000000; /* Color de TikTok (negro) */
+}
+.center {
     position: relative;
-}
-
-.polaroid-single:before {
-    content: '';
+  }
+  
+  .center::before {
+    content: "";
     position: absolute;
-    bottom: 15px;
-    right: 10px;
-    width: 40px;
-    height: 40px;
-    background: #f5f5f5;
-    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
-}
-
-.polaroid-single img {
+    top: 0;
+    left: 0;
     width: 100%;
-    height: auto;
-    display: block;
-    border: 1px}
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Overlay oscuro para mejor contraste */
+  }
+  
+  .center h1, .center button {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .BtnCatalogo {
+    padding: 12px 24px; /* Más grande */
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+  
+  .BtnCatalogo:hover {
+    transform: scale(1.05); /* Efecto "pulse" */
+  }
