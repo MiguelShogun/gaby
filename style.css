@@ -114,7 +114,7 @@ img {
 /* ===== HERO ===== */
 .hero {
     background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
-                background-image: url(photo_2025-04-07_19-20-47.jpg); center/cover no-repeat;
+                url('assets/images/hero-bg.webp') center/cover no-repeat;
     height: 80vh;
     min-height: 500px;
     display: flex;
@@ -347,5 +347,3 @@ cite {
         font-size: 2.2rem;
     }
 }
-    background-image: url(photo_2025-04-07_19-20-47.jpg);
-  
