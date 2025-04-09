@@ -1,108 +1,153 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="description" content="Tienda de vinilos vintage - Música que perdura en el tiempo">
+    <title>Vinyl Records | Discos Vintage</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="header">
-        <div class="rightHeader">
-            <h1 class="logo">
-        VintageStore
-    </h1> 
-        </div>
-       
-    <div class="leftHeader">
-        <ul class="menu">
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <a href="#" class="logo">Vinyl<span>Records</span></a>
             
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Informacion</a>   
-    
-                            <li class="cart-menu">
-                                <a href="#"><i class="fas fa-bars"></i></a>
-                                <ul class="dropdown">
-                                    <li><a href="#">Catálogo</a></li>
-                                    <li><a href="#">Próximamente</a></li>
-                                    <li><a href="#">Otros</a></li>
-                                </ul>
-                            </li>
+            <nav class="navbar">
+                <ul class="menu">
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Catálogo</a></li>
+                    <li><a href="#">Sobre Nosotros</a></li>
+                    <li class="dropdown-parent">
+                        <a href="#"><i class="fas fa-bars"></i></a>
+                        <ul class="dropdown">
+                            <li><a href="#">Próximos Lanzamientos</a></li>
+                            <li><a href="#">Ediciones Limitadas</a></li>
+                            <li><a href="#">Contacto</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-        </ul>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Música que perdura en el tiempo</h1>
+            <a href="#" class="btn btn-primary">Explora nuestro catálogo</a>
+        </div>
+    </section>
 
-    
-    </div>
-      
-    </div>
-    <div class="center">
-       
-            <h1>
-                Musica que perdura en el tiempo
-              
-            </h1>
-            <button class="BtnCatalogo">Explora nuestro catalogo</button>
-    </div>
-    <div class="Novedades">
-        <h1 class="Nov">Novedades</h1>
-
-        <DIV class="container">
-            <div class="gridContainer">
-            <div class="Grid1">
-                <img src="audioslave.jpeg" alt="">
-                <p class="decrip"> Vinilo de AudioSlave, AudioSlave</p>
-                <p class="price">20.99</p>
-            </div>
-            <div class="Grid1">
-                <img src="images (1).jpeg" alt="">
-                <p class="decrip"> Vinilo de Black in Black, ACDC</p>
-                <p class="price">20.99</p>
-            </div>
-        </div>
-        <div class="gridContainer1">
-             <div class="Grid1">
-            <img src="never.jpeg" alt="">
-            <p class="decrip"> Vinilo de Nevermind, Nirvana</p>
-            <p class="price">20.99</p>
-        </div>
-        <div class="Grid1">
-            <img src="queen.jpeg" alt="">
-            <p class="decrip"> Vinilo de A night at de Opera, Queen</p>
-            <p class="price">20.99</p>
-        </div>
-        </div>
-    </DIV>
-        
-       
-    </div>
-   
-    </div>
-    <div class="Footpage">
-        <p class="content">© VinyRecords todos los derechos reservados</p>
-        <div class="SocialNetwork">
-            <div class="social-icons">
-                <!-- Instagram -->
-                <a href="https://www.instagram.com/tu_perfil" target="_blank" class="instagram">
-                    <i class="fab fa-instagram"></i>
-                </a>
+    <!-- Novedades -->
+    <section class="featured">
+        <div class="container">
+            <h2 class="section-title">Novedades</h2>
+            
+            <div class="records-grid">
+                <!-- Disco 1 -->
+                <article class="record-card">
+                    <img src="audioslave.jpeg" alt="Vinilo de Audioslave" loading="lazy">
+                    <h3>Audioslave</h3>
+                    <p class="price">$20.99</p>
+                </article>
                 
-                <!-- Facebook -->
-                <a href="https://www.facebook.com/tu_perfil" target="_blank" class="facebook">
-                    <i class="fab fa-facebook"></i>
-                </a>
+                <!-- Disco 2 -->
+                <article class="record-card">
+                    <img src="assets/images/acdc.webp" alt="Vinilo de AC/DC - Back in Black" loading="lazy">
+                    <h3>Back in Black - AC/DC</h3>
+                    <p class="price">$22.99</p>
+                </article>
                 
-                <!-- TikTok -->
-                <a href="https://www.tiktok.com/@tu_perfil" target="_blank" class="tiktok">
-                    <i class="fab fa-tiktok"></i>
-                </a>
+                <!-- Disco 3 -->
+                <article class="record-card">
+                    <img src="nirvana.jpeg" alt="Vinilo de Nirvana - Nevermind" loading="lazy">
+                    <h3>Nevermind - Nirvana</h3>
+                    <p class="price">$24.99</p>
+                </article>
+                
+                <!-- Disco 4 -->
+                <article class="record-card">
+                    <img src="queen.jpeg" alt="Vinilo de Queen - A Night at the Opera" loading="lazy">
+                    <h3>A Night at the Opera - Queen</h3>
+                    <p class="price">$26.99</p>
+                </article>
             </div>
         </div>
-    </div>
-   
-     
+    </section>
+
+    <!-- Testimonios -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">Lo que dicen nuestros clientes</h2>
+            
+            <div class="testimonials-grid">
+                <!-- Testimonio 1 -->
+                <article class="testimonial-card">
+                    <img src="ana.webp" alt="ana.jpeg- Cliente satisfecha" class="reviewer-avatar">
+                    <blockquote>
+                        "La calidad de los vinilos superó mis expectativas. ¡Volveré a comprar!"
+                    </blockquote>
+                    <cite>- Ana, Madrid</cite>
+                </article>
+                
+                <!-- Testimonio 2 -->
+                <article class="testimonial-card">
+                    <img src="alberto.jpeg" alt="Carlos - Coleccionista" class="reviewer-avatar">
+                    <blockquote>
+                        "Encontré ediciones raras que no había visto en ningún otro sitio."
+                    </blockquote>
+                    <cite>- Carlos, Barcelona</cite>
+                </article>
+                
+                <!-- Testimonio 3 -->
+                <article class="testimonial-card">
+                    <img src="pedro.jpeg" alt="Pedro - Música vintage" class="reviewer-avatar">
+                    <blockquote>
+                        "El envío fue rápido y el disco llegó perfectamente empaquetado."
+                    </blockquote>
+                    <cite>- Pedro, Valencia</cite>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#" class="logo">Vinyl<span>Records</span></a>
+                    <p>Música que perdura en el tiempo</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Enlaces rápidos</h3>
+                    <ul>
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#">Catálogo</a></li>
+                        <li><a href="#">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-social">
+                    <h3>Síguenos</h3>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Vinyl Records. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
